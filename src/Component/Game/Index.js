@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { Game } from './Scene/Game';
+import { Game2 } from './Scene/Game2'
 import { Gameover } from './Scene/GameOver';
 import { Start } from './Scene/Start';
 import { Congratulation } from "./Scene/Congratulations";
@@ -21,7 +22,7 @@ export default function Juego() {
                 }
             },
             parent: 'game',
-            scene: [Start, Game, Gameover, Congratulation]
+            scene: [Start, Game, Game2, Gameover, Congratulation]
         }
 
         var game = new Phaser.Game(config);

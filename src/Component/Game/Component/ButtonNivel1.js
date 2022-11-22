@@ -1,14 +1,14 @@
-export class StartButton{
+export class ButtonNivel1{
     constructor(scene){
         this.relatedScene = scene;
     }
 
     preload(){
-        this.relatedScene.load.image('btnStart','assets/001.png')
+        this.relatedScene.load.image('btnNIVEL01','assets/NIVEL01.png')
     }
 
     create(){
-        this.btn = this.relatedScene.add.image(150,450,'btnStart').setInteractive();
+        this.btn = this.relatedScene.add.image(400,450,'btnNIVEL01').setInteractive();
         this.btn.on('pointerover',() => {
             this.btn.setFrame(1);
         });
