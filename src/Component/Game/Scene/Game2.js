@@ -24,12 +24,12 @@ export class Game2 extends Phaser.Scene{
     }
 
     create(){
-        this.phaseConstructor.create();
+        this.phaseConstructor.create2();
         this.choqueBrick = this.sound.add('choque');
     }
 
     update(){
-        this.phaseConstructor.update();
+        this.phaseConstructor.update2();
     }
     
     platformImpact(ball,paddle){
