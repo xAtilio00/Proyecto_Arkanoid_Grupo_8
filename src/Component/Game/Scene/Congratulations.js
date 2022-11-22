@@ -1,19 +1,19 @@
 import Phaser from'phaser';
-import { RestartButton } from '../Component/ButtonRePlay';
+import { ButtonMenu } from '../Component/ButtonMenu';
 
 export class Congratulation extends Phaser.Scene{
     constructor(){
         super({key: 'congratulation'})
-        this.RestartButton = new RestartButton(this);
+        this.ButtonMenu = new ButtonMenu(this);
     }
 
     preload(){
         this.load.image('gameover', 'assets/GANASTE.jpg');
-        this.RestartButton.preload();
+        this.ButtonMenu.preload();
     }
 
     create(){
         this.add.image(400,300,'gameover');
-        this.RestartButton.create();
+        this.ButtonMenu.create();
     }
 }

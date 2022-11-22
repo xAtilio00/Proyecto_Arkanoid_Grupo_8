@@ -3,6 +3,10 @@ import Phaser from "phaser";
 
 export class Phase2 extends Phase{
 
+    init(){
+        this.isMove = false;
+    }
+
     create(){
         this.phase1 = this.relatedScene.physics.add.image(400,300,'nivel2');
         this.paddle = this.relatedScene.physics.add.image(400,480,'paddle').setImmovable();
@@ -17,6 +21,9 @@ export class Phase2 extends Phase{
             velocity = 0 - velocity;
         }
         this.ball.setVelocity(velocity, -100);
+
+        this.ball.setVelocityX(0);
+        this.ball.setVelocityY(0);
 
         this.bricks = this.relatedScene.physics.add.staticGroup({
             key:['brick1','brick2','brick3'],
