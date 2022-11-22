@@ -8,6 +8,10 @@ export class PhaseConstructor{
             Phase2,
             Phase1
         ];
+
+        this.phases2 = [
+            Phase2
+        ]
     }
 
     create(){
@@ -17,6 +21,16 @@ export class PhaseConstructor{
     }
 
     update(){
+        return this.CurrenLevel.update();
+    }
+
+    create2(){
+        let CurrenPhaseClass = this.phases2.pop();
+        this.CurrenLevel = new CurrenPhaseClass(this.relatedScene);
+        return this.CurrenLevel.create();
+    }
+
+    update2(){
         return this.CurrenLevel.update();
     }
 
